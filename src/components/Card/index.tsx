@@ -2,14 +2,14 @@ import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
 interface CardProps {
-  user: string;
+  name: string;
   email: string;
 }
 
-const Card = ({ user, email }: CardProps) => {
+const Card = ({ name, email }: CardProps) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>{user}</Text>
+      <Text style={styles.text}>{name}</Text>
       <Text style={styles.text}>{email}</Text>
     </View>
   );
@@ -24,6 +24,7 @@ const styles = StyleSheet.create({
     padding: 15,
     gap: 16,
     justifyContent: "center",
+    alignSelf: "center",
   },
   text: {
     color: "#FFF",
