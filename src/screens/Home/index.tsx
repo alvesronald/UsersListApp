@@ -1,12 +1,27 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { SafeAreaView, StyleSheet, Button } from "react-native";
+import { NativeStackScreenProps } from "@react-navigation/native-stack";
+import { MyStackProps } from "../../stacks";
 
-const Home = () => {
+export type HomeScreenProps = NativeStackScreenProps<MyStackProps, "Home">;
+
+const Home = ({ navigation }: HomeScreenProps) => {
   return (
-    <View>
-      <Text>Home</Text>
-    </View>
+    <SafeAreaView style={styles.container}>
+      <Button
+        title="Navegar para listagem de usuários"
+        onPress={() => navigation.navigate("UsersList")}
+      />
+    </SafeAreaView>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+  },
+});
 
 export default Home;

@@ -2,12 +2,23 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Home from "../screens/Home";
 import UsersList from "../screens/UsersList";
 
-const Stack = createStackNavigator();
+export type MyStackProps = {
+  Home: undefined;
+  UsersList: undefined;
+};
+
+const Stack = createStackNavigator<MyStackProps>();
 
 function MyStack() {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Home" component={Home} />
+      <Stack.Screen
+        name="Home"
+        component={Home}
+        options={{
+          headerShown: false,
+        }}
+      />
       <Stack.Screen name="UsersList" component={UsersList} />
     </Stack.Navigator>
   );
