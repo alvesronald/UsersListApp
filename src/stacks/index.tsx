@@ -1,27 +1,11 @@
-import { createStackNavigator } from "@react-navigation/stack";
-import Home from "../screens/Home";
-import UsersList from "../screens/UsersList";
+import { NavigationContainer } from "@react-navigation/native";
+import { StatusBar } from "expo-status-bar";
+import MyStack from "./MyStack";
 
-export type MyStackProps = {
-  Home: undefined;
-  UsersList: undefined;
-};
-
-const Stack = createStackNavigator<MyStackProps>();
-
-function MyStack() {
+export default function Stack() {
   return (
-    <Stack.Navigator>
-      <Stack.Screen
-        name="Home"
-        component={Home}
-        options={{
-          headerShown: false,
-        }}
-      />
-      <Stack.Screen name="UsersList" component={UsersList} />
-    </Stack.Navigator>
+    <NavigationContainer>
+      <MyStack />
+    </NavigationContainer>
   );
 }
-
-export default MyStack;

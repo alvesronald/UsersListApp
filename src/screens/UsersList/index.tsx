@@ -74,7 +74,11 @@ const UsersList: React.FC = () => {
     }
   };
 
-  return <SafeAreaView style={styles.container}>{renderData()}</SafeAreaView>;
+  return (
+    <SafeAreaView style={styles.container} testID="usersList-screen-container">
+      {renderData()}
+    </SafeAreaView>
+  );
 };
 
 const styles = StyleSheet.create({
