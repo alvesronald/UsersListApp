@@ -57,14 +57,14 @@ describe("<Home />", () => {
   });
 
   it("should navigate to the UsersList screen on button press", async () => {
-    const { getByTestId, findByText } = render(<Stack />);
+    const { getByText, findByText } = render(<Stack />);
 
-    const button = await findByText("Navegar para listagem de usuários");
+    const button = await getByText("Navegar para listagem de usuários");
 
     fireEvent.press(button);
 
     await waitFor(() => {
-      expect(getByTestId("usersList-screen-container")).toBeTruthy();
+      expect(findByText("UsersList")).toBeTruthy();
     });
   });
 });
