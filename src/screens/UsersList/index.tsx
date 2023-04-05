@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text } from "react-native/types";
+import { View, Text } from "react-native";
 
 const UsersList = () => {
   return (
