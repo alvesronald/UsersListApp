@@ -1,5 +1,5 @@
 import Home, { HomeScreenProps } from "../../../../src/screens/Home";
-import { render, waitFor } from "@testing-library/react-native";
+import { act, render, waitFor } from "@testing-library/react-native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { MyStackProps } from "../../../../src/stacks/MyStack";
 import fireEvent from "@testing-library/react-native/build/fireEvent";
@@ -61,10 +61,12 @@ describe("<Home />", () => {
 
     const button = await getByText(/Navegar para listagem de usuários/i);
 
-    fireEvent.press(button);
+    await act(async () => {
+      await fireEvent.press(button);
+    });
 
     await waitFor(() => {
-      expect(findByText("UsersList")).toBeTruthy();
+      expect(findByText(/UsersList/i)).toBeTruthy();
     });
   });
 });
