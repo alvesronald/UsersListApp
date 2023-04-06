@@ -8,7 +8,7 @@ interface CardProps {
 
 const Card = ({ name, email }: CardProps) => {
   return (
-    <View style={styles.container}>
+    <View style={styles.container} testID="usersList-card">
       <Text style={styles.text}>{name}</Text>
       <Text style={styles.text}>{email}</Text>
     </View>

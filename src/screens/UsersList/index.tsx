@@ -53,7 +53,13 @@ const UsersList: React.FC = () => {
     if (!!errors) {
       return <Text style={styles.infoText}>{errors}</Text>;
     } else if (isLoading) {
-      return <ActivityIndicator size="large" style={{ marginTop: 10 }} />;
+      return (
+        <ActivityIndicator
+          size="large"
+          testID="loading-users-list"
+          style={{ marginTop: 10 }}
+        />
+      );
     } else {
       return (
         <FlatList

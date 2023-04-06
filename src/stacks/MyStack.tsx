@@ -7,7 +7,7 @@ export type MyStackProps = {
   UsersList: undefined;
 };
 
-const Stack = createStackNavigator<MyStackProps>();
+export const Stack = createStackNavigator<MyStackProps>();
 
 function MyStack() {
   return (
