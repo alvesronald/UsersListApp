@@ -5,7 +5,7 @@ UsersListApp- React Native
 
 
 <p>
-The UsersList App was created with the intention of showing my knowledge in unit testing and E2E (end to end). It's a simple application with navigation and a small list of users when consuming the route from an API.
+The UsersList App was created with the intention of showing my knowledge in unit testing. It's a simple application with navigation and a small list of users when consuming the route from an API.
 </p>
 
 
