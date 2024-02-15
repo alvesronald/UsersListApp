@@ -1,12 +1,10 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
+import { UserProps } from "../../types";
 
-interface CardProps {
-  name: string;
-  email: string;
-}
 
-const Card = ({ name, email }: CardProps) => {
+
+const UserInfoCard = ({ name, email }: UserProps) => {
   return (
     <View style={styles.container} testID="usersList-card">
       <Text style={styles.text}>{name}</Text>
@@ -32,4 +30,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Card;
+export default UserInfoCard;

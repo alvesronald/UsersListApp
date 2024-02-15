@@ -7,14 +7,11 @@ import {
   ActivityIndicator,
 } from "react-native";
 import { useFocusEffect } from "@react-navigation/native";
-import Card from "../../components/Card";
+import UserInfoCard from "../../components/UserInfoCard";
 import { api } from "../../services/api";
+import { UserProps } from "../../types";
 
-interface UserProps {
-  id: number;
-  name: string;
-  email: string;
-}
+
 
 const UsersList: React.FC = () => {
   const [users, setUsers] = useState<UserProps[]>([]);
@@ -65,7 +62,7 @@ const UsersList: React.FC = () => {
         <FlatList
           data={users}
           keyExtractor={(item) => item.id.toString()}
-          renderItem={({ item }) => <Card {...item} />}
+          renderItem={({ item }) => <UserInfoCard {...item} />}
           contentContainerStyle={{
             gap: 10,
             paddingVertical: 10,
