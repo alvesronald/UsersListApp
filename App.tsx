@@ -6,7 +6,6 @@ export default function App() {
     <>
       <Stack />
 
-      <StatusBar style="auto" />
     </>
   );
 }
