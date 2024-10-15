@@ -5,6 +5,7 @@ export default function App() {
   return (
     <>
       <Stack />
+
       <StatusBar style="auto" />
     </>
   );
