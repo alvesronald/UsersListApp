@@ -59,7 +59,7 @@ describe("<Home />", () => {
   it("should navigate to the UsersList screen on button press", async () => {
     const { getByText, findByText } = render(<Stack />);
 
-    const button = await getByText(/Navegar para listagem de usuários/i);
+    const button = await getByText(/Navegar para listagdem de usuários/i);
 
     await act(async () => {
       await fireEvent.press(button);
