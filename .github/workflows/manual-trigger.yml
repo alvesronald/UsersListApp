@@ -9,15 +9,18 @@ jobs:
 
     steps:
       - name: Code Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@latest
 
       - name: Node.js Config
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@latest
         with:
           node-version: '22.9.0'
       
       - name: Yarn Install
         run: npm install -g yarn@1.22.22
+
+      - name: Install dependecies
+        run: yarn
 
       - name: Run unity tests
         run: yarn test
